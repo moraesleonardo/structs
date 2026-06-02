@@ -15,10 +15,7 @@ func main(){
 
 	var appUser *user.User
 
-	appUser = &user.User{
-		FirstName: "Leonardo",
-
-	}
+	appUser, err := user.NewUser(userFirstName, userLastName, userBirthdate)
 
 	if err != nil {
 		fmt.Println(err)
@@ -26,9 +23,9 @@ func main(){
 	}
 
 	//...do something awsesome with that gathered data!
-	appUser.outputUserDetails()
-	appUser.clearUserName()
-	appUser.outputUserDetails()
+	appUser.OutputUserDetails()
+	appUser.ClearUserName()
+	appUser.OutputUserDetails()
 }
 
 
