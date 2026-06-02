@@ -1,8 +1,13 @@
 package user
 
+import(
+	"errors"
+	"fmt"
+	"time"
+)
 
-type user struct {
-	firstName string 
+type User struct {
+	FirstName string 
 	lastName string
 	birthDate string
 	createdAt time.Time

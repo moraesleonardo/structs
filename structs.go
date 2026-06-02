@@ -1,9 +1,9 @@
 package main
 
 import (
-	"errors"
+	"github.com/moraesleonardo/structs/user"
 	"fmt"
-	"time"
+
 )
 
 
@@ -13,9 +13,12 @@ func main(){
 	userLastName := getUserData("Please enter your last name: ")
 	userBirthdate := getUserData("Please enter your birthdate (MM/DD/YYYY): ")
 
-	var appUser *user 
+	var appUser *user.User
 
-	appUser, err := newUser(userFirstName, userLastName, userBirthdate)
+	appUser = &user.User{
+		FirstName: "Leonardo",
+
+	}
 
 	if err != nil {
 		fmt.Println(err)
